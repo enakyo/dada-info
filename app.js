@@ -594,11 +594,16 @@ class UIManager {
 
 // --- Main Bootstrap ---
 (async function () {
-    const tm = new TimeManager(8); // UTC+8
-    const dm = new DataManager();
-    await dm.load();
-    const ec = new EventCalculator(tm, dm);
-    const ui = new UIManager(dm, tm, ec);
+    try {
+        const tm = new TimeManager(8); // UTC+8
+        const dm = new DataManager();
+        await dm.load();
+        const ec = new EventCalculator(tm, dm);
+        const ui = new UIManager(dm, tm, ec);
 
-    ui.init();
+        ui.init();
+    } catch (e) {
+        console.error(e);
+        alert('Initialization Failed: ' + e.message);
+    }
 })();

@@ -43,7 +43,7 @@
       "event.path_of_trials": "試練の道",
       "event.survivor_pass": "サバイバーパス",
       "event.guild_shop": "ギルドショップ",
-      "event.total_charge": "累計チャージ報酬",
+      "event.online_match": "オンライン対戦",
       "phase.expedition": "遠征段階",
       "phase.match_confirm": "マッチング確定",
       "phase.battle": "対戦段階",
@@ -95,6 +95,7 @@
       "event.survivor_pass": "Survivor Pass",
       "event.guild_shop": "Guild Shop",
       "event.total_charge": "Total Charge",
+      "event.online_match": "Online Match",
       "phase.expedition": "Expedition Phase",
       "phase.match_confirm": "Matching",
       "phase.battle": "Battle Phase",
@@ -146,6 +147,7 @@
       "event.survivor_pass": "特工令牌",
       "event.guild_shop": "公会商店",
       "event.total_charge": "累充奖励",
+      "event.online_match": "在线对战",
       "phase.expedition": "远征阶段",
       "phase.match_confirm": "分组确认",
       "phase.battle": "对战阶段",
@@ -361,6 +363,12 @@
       "nameKey": "event.total_charge",
       "startDate": "2026-01-06",
       "cycleDays": 20
+    },
+    {
+      "id": "online_match",
+      "type": "weekly_update",
+      "nameKey": "event.online_match",
+      "updateWeekday": 1
     }
   ]
 }
