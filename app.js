@@ -206,6 +206,9 @@ class EventCalculator {
         if (dayConfig.type === 'preparation') {
             result.statusClass = 'status-preparation';
             result.statusLabel = this.dm.t('status.preparation');
+        } else if (dayConfig.type === 'finished') {
+            result.statusClass = 'status-finished';
+            result.statusLabel = this.dm.t('status.expedition_finished');
         } else {
             result.statusClass = 'status-active';
             result.statusLabel = this.dm.t('status.active');

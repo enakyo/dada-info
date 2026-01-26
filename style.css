@@ -216,6 +216,13 @@ h1 {
     border-left: 3px solid #666;
 }
 
+.event-row.status-finished {
+    border-left: 3px solid #888;
+    background-color: #252525;
+    /* Slightly darker/grayer bg */
+    color: #999;
+}
+
 /* 2 Columns */
 .event-col-name {
     flex: 1;

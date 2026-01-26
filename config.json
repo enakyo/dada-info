@@ -14,6 +14,7 @@
       "status.update_day": "更新日",
       "status.preparation": "準備期間",
       "status.finished": "終了",
+      "status.expedition_finished": "遠征終了",
       "label.day": "<span class='big-num'>{day}</span>日目",
       "label.remaining": "残り<span class='big-num'>{day}</span>日",
       "label.next_update": "残り<span class='big-num'>{day}</span>日",
@@ -168,7 +169,7 @@
       "nameKey": "event.mine_expedition",
       "schedule": {
         "1": {
-          "type": "preparation"
+          "type": "finished"
         },
         "2": {
           "type": "active",
