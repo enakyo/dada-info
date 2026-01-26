@@ -13,9 +13,10 @@ permissions:
 jobs:
   update-data:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./dada-info  # サブディレクトリを指定
+    # defaults:
+    #   run:
+    #     working-directory: ./dada-info  # リポジトリルートにある場合は不要なので削除
+
 
     steps:
       - name: Checkout code
