@@ -86,7 +86,7 @@ class DataManager {
 
         // 2. If no local or invalid, load default
         if (!this.config) {
-            const res = await fetch(CONFIG_PATH);
+            const res = await fetch(CONFIG_PATH + '?t=' + Date.now());
             this.config = await res.json();
             console.log('Loaded default config');
         }
