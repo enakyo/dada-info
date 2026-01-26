@@ -274,9 +274,15 @@ h1 {
 
 .mini-badge {
     font-size: 0.7rem;
-    padding: 1px 4px;
+    padding: 2px 6px;
     border-radius: 4px;
     line-height: 1.2;
+    white-space: nowrap;
+    /* Prevent vertical stacking */
+    display: inline-block;
+    /* Ensure horizontal flow */
+    flex-shrink: 0;
+    /* Prevent shrinking */
 }
 
 .update-badge {
