@@ -1,0 +1,408 @@
+:root {
+    --bg-color: #1a1a1a;
+    --card-bg: #2d2d2d;
+    --text-primary: #e0e0e0;
+    --text-secondary: #aaaaaa;
+    --accent-color: #4CAF50;
+    --accent-hover: #45a049;
+    --danger-color: #f44336;
+    --warning-color: #ff9800;
+    --border-color: #444;
+    --modal-bg: rgba(0, 0, 0, 0.8);
+
+    --font-main: 'Noto Sans JP', sans-serif;
+
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.app-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: var(--spacing-sm);
+}
+
+h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-primary);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+/* Calendar Section */
+.calendar-section {
+    background-color: var(--card-bg);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Container for months */
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    /* Mobile default: stack or just show one via JS? Let's hide 2nd via CSS if needed, but flex column is fine for stack */
+    gap: var(--spacing-lg);
+}
+
+.calendar-month-block {
+    flex: 1;
+}
+
+.month-label {
+    text-align: center;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-secondary);
+}
+
+/* Hide navigation month label since we show it per block now? 
+   No, let's keep the main navigator but maybe update the logic.
+   Actually, let's hide specific month labels inside blocks if the header covers it.
+   But user wants 2 months. So header "2026/01 - 2026/02" or individual labels.
+   Individual labels are better for 2 months. 
+*/
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+}
+
+.calendar-day {
+    aspect-ratio: 1.2;
+    /* Slightly shorter than square */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.1s;
+}
+
+.calendar-day:hover {
+    background-color: #3d3d3d;
+}
+
+.calendar-day.other-month {
+    color: #444;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.calendar-day.today {
+    border: 1px solid var(--accent-color);
+    font-weight: bold;
+}
+
+.calendar-day.selected {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Desktop View for Calendar */
+@media (min-width: 768px) {
+    .calendar-container {
+        flex-direction: row;
+        /* Side by side */
+        gap: var(--spacing-lg);
+    }
+
+    .calendar-day {
+        font-size: 0.8rem;
+        /* Smaller font on PC */
+        aspect-ratio: 1.4;
+        /* More compact vertically */
+    }
+}
+
+/* Info Section */
+.info-section h3 {
+    margin-bottom: var(--spacing-md);
+    border-left: 4px solid var(--accent-color);
+    padding-left: var(--spacing-sm);
+    font-size: 1.1rem;
+}
+
+/* Event List - Table-like Layout */
+.event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    /* Separator line effect */
+    background-color: var(--border-color);
+    /* Lines color */
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.event-row {
+    display: flex;
+    background-color: var(--card-bg);
+    padding: 8px 12px;
+    align-items: center;
+}
+
+.event-row:hover {
+    background-color: #333;
+}
+
+/* Left Status Indicator (Border) */
+.event-row.status-active {
+    border-left: 3px solid var(--accent-color);
+}
+
+.event-row.status-exchange-only {
+    border-left: 3px solid var(--warning-color);
+}
+
+.event-row.status-preparation {
+    border-left: 3px solid #666;
+}
+
+/* 2 Columns */
+.event-col-name {
+    flex: 1;
+    /* Variable width */
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+    /* Important for flex child truncation/sizing */
+}
+
+.event-name-text {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.event-col-info {
+    flex: 1;
+    /* Variable width */
+    text-align: right;
+    font-size: 0.85rem;
+    color: #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.info-primary {
+    color: var(--text-primary);
+}
+
+.big-num {
+    font-size: 1.15em;
+    /* +2pt approx (relative) */
+    font-weight: bold;
+    font-family: monospace, sans-serif;
+    vertical-align: -1px;
+}
+
+.info-secondary {
+    font-size: 0.75rem;
+    color: #888;
+}
+
+.mini-badge {
+    font-size: 0.7rem;
+    padding: 1px 4px;
+    border-radius: 4px;
+    line-height: 1.2;
+}
+
+.update-badge {
+    background-color: var(--accent-color);
+    color: #fff;
+    font-weight: bold;
+}
+
+.exchange-badge {
+    background-color: var(--warning-color);
+    color: #111;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: var(--bg-color);
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.modal-header {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-body {
+    padding: var(--spacing-md);
+    overflow-y: auto;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    font-weight: bold;
+}
+
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    background-color: var(--card-bg);
+    border: 1px solid #555;
+    color: var(--text-primary);
+    border-radius: 4px;
+}
+
+.note {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.note-small {
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 4px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+}
+
+.primary-button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.danger-button {
+    background-color: transparent;
+    color: var(--danger-color);
+    border: 1px solid var(--danger-color);
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Utilities */
+.hidden {
+    display: none !important;
+}
+
+@media (min-width: 768px) {
+    .app-container {
+        padding: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 767px) {
+    .mobile-hidden {
+        display: none !important;
+    }
+}

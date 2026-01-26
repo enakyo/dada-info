@@ -1,0 +1,366 @@
+{
+  "settings": {
+    "defaultLang": "ja",
+    "gameTimezoneOffset": 8
+  },
+  "terms": {
+    "ja": {
+      "title": "ダダサバイバー イベント情報",
+      "settings": "設定",
+      "language": "言語",
+      "reset_settings": "初期設定に戻す",
+      "status.active": "開催中",
+      "status.exchange_only": "交換のみ",
+      "status.update_day": "更新日",
+      "status.preparation": "準備期間",
+      "status.finished": "終了",
+      "label.day": "<span class='big-num'>{day}</span>日目",
+      "label.remaining": "残り<span class='big-num'>{day}</span>日",
+      "label.next_update": "残り<span class='big-num'>{day}</span>日",
+      "label.round": "第<span class='big-num'>{round}</span>ラウンド",
+      "label.week": "第<span class='big-num'>{week}</span>週",
+      "label.cycle_day": "<span class='big-num'>{day}</span>日目",
+      "weekday.mon": "月",
+      "weekday.tue": "火",
+      "weekday.wed": "水",
+      "weekday.thu": "木",
+      "weekday.fri": "金",
+      "weekday.sat": "土",
+      "weekday.sun": "日",
+      "event.mine_expedition": "月の鉱山遠征",
+      "event.limited": "期間限定イベント",
+      "event.regular_challenge": "レギュラーチャレンジ",
+      "event.echo": "末世反響",
+      "event.zone_op": "地域行動",
+      "event.guild_exploration": "ギルド探索",
+      "event.escape_op": "エスケープオペレーション",
+      "event.shop_core": "汎用交換(神錬コア/SP欠片)",
+      "event.shop_collection": "汎用交換(コレクション欠片)",
+      "event.shop_pet": "汎用交換(ビスケット)",
+      "event.shop_other": "その他アイテム交換",
+      "event.pet_merchant": "ペット商人",
+      "event.weekly_mission": "ウィークリーミッション",
+      "event.path_of_trials": "試練の道",
+      "event.survivor_pass": "サバイバーパス",
+      "event.guild_shop": "ギルドショップ",
+      "event.total_charge": "累計チャージ報酬",
+      "phase.expedition": "遠征段階",
+      "phase.match_confirm": "マッチング確定",
+      "phase.battle": "対戦段階",
+      "phase.exchange": "交換",
+      "extra.start_1300": "13:00開始",
+      "extra.end_2450": "24:50締切",
+      "extra.stages_1_10": "ステージ1-10開放",
+      "extra.stages_11_15": "ステージ11-15開放",
+      "extra.stages_16_20": "ステージ16-20開放",
+      "extra.extreme": "極限チャレンジ開放"
+    },
+    "en": {
+      "title": "Survivor.io Event Info",
+      "settings": "Settings",
+      "language": "Language",
+      "reset_settings": "Reset Settings",
+      "status.active": "Active",
+      "status.exchange_only": "Exchange Only",
+      "status.update_day": "Update Day",
+      "status.preparation": "Preparation",
+      "status.finished": "Finished",
+      "label.day": "Day {day}",
+      "label.remaining": "{day} days left",
+      "label.next_update": "{day} days left",
+      "label.round": "Round {round}",
+      "label.week": "Week {week}",
+      "label.cycle_day": "Day {day}",
+      "weekday.mon": "Mon",
+      "weekday.tue": "Tue",
+      "weekday.wed": "Wed",
+      "weekday.thu": "Thu",
+      "weekday.fri": "Fri",
+      "weekday.sat": "Sat",
+      "weekday.sun": "Sun",
+      "event.mine_expedition": "Lunar Mine Expedition",
+      "event.limited": "Limited Event",
+      "event.regular_challenge": "Regular Challenge",
+      "event.echo": "Enders Echo",
+      "event.zone_op": "Zone Operation",
+      "event.guild_exploration": "Guild Exploration",
+      "event.escape_op": "Escape Operation",
+      "event.shop_core": "Exchange (Core/Shards)",
+      "event.shop_collection": "Exchange (Collection Shards)",
+      "event.shop_pet": "Exchange (Biscuits)",
+      "event.shop_other": "Other Exchange",
+      "event.pet_merchant": "Pet Merchant",
+      "event.weekly_mission": "Weekly Mission",
+      "event.path_of_trials": "Path of Trials",
+      "event.survivor_pass": "Survivor Pass",
+      "event.guild_shop": "Guild Shop",
+      "event.total_charge": "Total Charge",
+      "phase.expedition": "Expedition Phase",
+      "phase.match_confirm": "Matching",
+      "phase.battle": "Battle Phase",
+      "phase.exchange": "Exchange",
+      "extra.start_1300": "Start 13:00",
+      "extra.end_2450": "End 24:50",
+      "extra.stages_1_10": "Stages 1-10",
+      "extra.stages_11_15": "Stages 11-15",
+      "extra.stages_16_20": "Stages 16-20",
+      "extra.extreme": "Extreme Challenge"
+    },
+    "zh": {
+      "title": "弹壳特攻队 活动信息",
+      "settings": "设置",
+      "language": "语言",
+      "reset_settings": "恢复默认设置",
+      "status.active": "进行中",
+      "status.exchange_only": "仅兑换",
+      "status.update_day": "更新日",
+      "status.preparation": "准备期",
+      "status.finished": "已结束",
+      "label.day": "第{day}天",
+      "label.remaining": "其余{day}天",
+      "label.next_update": "其余{day}天",
+      "label.round": "第{round}轮",
+      "label.week": "第{week}周",
+      "label.cycle_day": "第{day}天",
+      "weekday.mon": "一",
+      "weekday.tue": "二",
+      "weekday.wed": "三",
+      "weekday.thu": "四",
+      "weekday.fri": "五",
+      "weekday.sat": "六",
+      "weekday.sun": "日",
+      "event.mine_expedition": "月球矿井",
+      "event.limited": "限时活动",
+      "event.regular_challenge": "常驻挑战",
+      "event.echo": "末世反响",
+      "event.zone_op": "区域行动",
+      "event.guild_exploration": "公会远征",
+      "event.escape_op": "逃生行动",
+      "event.shop_core": "神铸/碎片兑换",
+      "event.shop_collection": "收藏品碎片",
+      "event.shop_pet": "宠物饼干",
+      "event.shop_other": "其他兑换",
+      "event.pet_merchant": "宠物商人",
+      "event.weekly_mission": "周常任务",
+      "event.path_of_trials": "试炼之道",
+      "event.survivor_pass": "特工令牌",
+      "event.guild_shop": "公会商店",
+      "event.total_charge": "累充奖励",
+      "phase.expedition": "远征阶段",
+      "phase.match_confirm": "分组确认",
+      "phase.battle": "对战阶段",
+      "phase.exchange": "兑换",
+      "extra.start_1300": "13:00开始",
+      "extra.end_2450": "24:50截止",
+      "extra.stages_1_10": "开放1-10",
+      "extra.stages_11_15": "开放11-15",
+      "extra.stages_16_20": "开放16-20",
+      "extra.extreme": "极限挑战"
+    }
+  },
+  "events": [
+    {
+      "id": "mine_expedition",
+      "type": "weekly_schedule",
+      "nameKey": "event.mine_expedition",
+      "schedule": {
+        "1": {
+          "type": "preparation"
+        },
+        "2": {
+          "type": "active",
+          "phaseKey": "phase.expedition",
+          "extraKey": "extra.start_1300"
+        },
+        "3": {
+          "type": "active",
+          "phaseKey": "phase.expedition",
+          "extraKey": "extra.end_2450"
+        },
+        "4": {
+          "type": "preparation",
+          "phaseKey": "phase.match_confirm"
+        },
+        "5": {
+          "type": "active",
+          "phaseKey": "phase.battle",
+          "subIndex": 1
+        },
+        "6": {
+          "type": "active",
+          "phaseKey": "phase.battle",
+          "subIndex": 2
+        },
+        "0": {
+          "type": "active",
+          "phaseKey": "phase.battle",
+          "subIndex": 3
+        }
+      }
+    },
+    {
+      "id": "limited_event",
+      "type": "cycle_days",
+      "nameKey": "event.limited",
+      "startDate": "2026-01-20",
+      "cycleDays": 6,
+      "phases": [
+        {
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "type": "active"
+        },
+        {
+          "days": [
+            6
+          ],
+          "type": "exchange_only"
+        }
+      ]
+    },
+    {
+      "id": "regular_challenge",
+      "type": "cycle_days",
+      "nameKey": "event.regular_challenge",
+      "startDate": "2026-01-22",
+      "cycleDays": 3,
+      "phases": [
+        {
+          "days": [
+            1
+          ],
+          "type": "active",
+          "isUpdateDay": true
+        },
+        {
+          "days": [
+            2,
+            3
+          ],
+          "type": "active"
+        }
+      ]
+    },
+    {
+      "id": "echo",
+      "type": "season_rounds",
+      "nameKey": "event.echo",
+      "startDate": "2026-01-15",
+      "seasonDays": 28,
+      "roundDays": 3
+    },
+    {
+      "id": "zone_op",
+      "type": "season_week_gates",
+      "nameKey": "event.zone_op",
+      "startDate": "2026-01-15",
+      "seasonDays": 28,
+      "updateWeekday": 4,
+      "gates": [
+        {
+          "week": 1,
+          "extraKey": "extra.stages_1_10"
+        },
+        {
+          "week": 2,
+          "extraKey": "extra.stages_11_15"
+        },
+        {
+          "week": 3,
+          "extraKey": "extra.stages_16_20"
+        },
+        {
+          "week": 4,
+          "extraKey": "extra.extreme"
+        }
+      ]
+    },
+    {
+      "id": "guild_exploration",
+      "type": "remaining_only",
+      "nameKey": "event.guild_exploration",
+      "startDate": "2026-01-15",
+      "cycleDays": 28
+    },
+    {
+      "id": "escape_op",
+      "type": "remaining_only",
+      "nameKey": "event.escape_op",
+      "startDate": "2026-01-01",
+      "cycleDays": 28
+    },
+    {
+      "id": "shop_core",
+      "type": "remaining_only",
+      "nameKey": "event.shop_core",
+      "startDate": "2026-01-04",
+      "cycleDays": 28
+    },
+    {
+      "id": "shop_collection",
+      "type": "remaining_only",
+      "nameKey": "event.shop_collection",
+      "startDate": "2026-01-06",
+      "cycleDays": 28,
+      "remainingLabelKey": "label.next_update"
+    },
+    {
+      "id": "shop_pet",
+      "type": "weekly_update",
+      "nameKey": "event.shop_pet",
+      "updateWeekday": 1
+    },
+    {
+      "id": "shop_other",
+      "type": "remaining_only",
+      "nameKey": "event.shop_other",
+      "startDate": "2026-01-18",
+      "cycleDays": 28
+    },
+    {
+      "id": "pet_merchant",
+      "type": "weekly_update",
+      "nameKey": "event.pet_merchant",
+      "updateWeekday": 1
+    },
+    {
+      "id": "weekly_mission",
+      "type": "weekly_update",
+      "nameKey": "event.weekly_mission",
+      "updateWeekday": 1
+    },
+    {
+      "id": "path_of_trials",
+      "type": "remaining_only",
+      "nameKey": "event.path_of_trials",
+      "startDate": "2026-01-23",
+      "cycleDays": 5
+    },
+    {
+      "id": "survivor_pass",
+      "type": "remaining_only",
+      "nameKey": "event.survivor_pass",
+      "startDate": "2026-01-15",
+      "cycleDays": 28
+    },
+    {
+      "id": "guild_shop",
+      "type": "remaining_only",
+      "nameKey": "event.guild_shop",
+      "startDate": "2026-01-21",
+      "cycleDays": 28
+    },
+    {
+      "id": "total_charge",
+      "type": "remaining_only",
+      "nameKey": "event.total_charge",
+      "startDate": "2026-01-06",
+      "cycleDays": 20
+    }
+  ]
+}

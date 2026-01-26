@@ -1,0 +1,55 @@
+# GitHub Pages 公開手順書
+
+「ダダサバイバー イベント情報ツール」をGitHubで公開するための詳細手順です。
+
+## 1. GitHubリポジトリの作成
+1. [GitHub](https://github.com/) にログインします。
+2. 右上の「+」アイコン → 「New repository」をクリックします。
+3. **Repository name**（リポジトリ名）を入力します。
+   * 例: `dada-info`
+4. **Public**（公開）が選択されていることを確認します（Privateだと無料版ではPages公開できない場合があります）。
+5. 「Create repository」ボタンをクリックします。
+
+## 2. ローカルファイルのアップロード
+PowerShellなどのターミナルを開き、以下のコマンドを順番に実行してください。
+※ `<YOUR-USERNAME>` の部分は、あなたのGitHubユーザー名に置き換えてください。
+
+```powershell
+# 1. フォルダへ移動
+cd c:/Users/enaky/.gemini/antigravity/brain/ea0fec48-bcdd-48ed-8a04-202aeda6fd08/dada-info
+
+# 2. Gitの初期化
+git init
+
+# 3. ファイルをステージング
+git add .
+
+# 4. コミット（記録）
+git commit -m "Initial commit"
+
+# 5. メインブランチ名を 'main' に設定
+git branch -M main
+
+# 6. リポジトリを登録（URLは自分のものに合わせてください！）
+# 形式: https://github.com/ユーザー名/リポジトリ名.git
+git remote add origin https://github.com/<YOUR-USERNAME>/dada-info.git
+
+# 7. GitHubへ送信（認証ウィンドウが出たらログインしてください）
+git push -u origin main
+```
+
+## 3. GitHub Pagesの設定
+1. GitHubのリポジトリページを開きます。
+2. 上部のタブから「**Settings**」をクリックします。
+3. 左側のメニューから「**Pages**」をクリックします。
+4. **Build and deployment** > **Source** が「Deploy from a branch」になっていることを確認します。
+5. **Branch** の設定:
+   * 「None」を「**main**」に変更します。
+   * フォルダ指定は「/ (root)」のままでOKです。
+   * 「**Save**」ボタンをクリックします。
+6. 設定後、ページ上部に公開URLが表示されるまで数分待ちます（リロードすると表示されます）。
+   * URL例: `https://<YOUR-USERNAME>.github.io/dada-info/`
+
+## 4. 完成！
+表示されたURLにアクセスして、ツールが正しく表示されるか確認してください。
+スマホやPCのブラウザからいつでもアクセスできるようになります。
