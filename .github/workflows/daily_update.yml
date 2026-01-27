@@ -2,8 +2,8 @@ name: Daily Data Update
 
 on:
   schedule:
-    # 毎日 JST 1:00 (UTC 16:00) に実行
-    - cron: '0 16 * * *'
+    # 毎日 JST 1:15 (UTC 16:15) に実行 (スケジュール再登録のため時間変更)
+    - cron: '15 16 * * *'
   # 手動実行も許可（Actionsタブから実行可能）
   workflow_dispatch:
 
