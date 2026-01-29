@@ -17,6 +17,9 @@
       "status.expedition_finished": "遠征終了",
       "label.day": "<span class='big-num'>{day}</span>日目",
       "label.remaining": "残り<span class='big-num'>{day}</span>日",
+      "label.last_day": "最終日",
+      "label.finished": "終了",
+      "tag.ending_soon": "終了間近",
       "label.next_update": "残り<span class='big-num'>{day}</span>日",
       "label.round": "第<span class='big-num'>{round}</span>ラウンド",
       "label.week": "第<span class='big-num'>{week}</span>週",
@@ -293,10 +296,51 @@
     },
     {
       "id": "escape_op",
-      "type": "remaining_only",
+      "type": "cycle_days",
       "nameKey": "event.escape_op",
-      "startDate": "2026-01-01",
-      "cycleDays": 28
+      "startDate": "2026-01-02",
+      "cycleDays": 28,
+      "showRemaining": true,
+      "phases": [
+        {
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27
+          ],
+          "type": "active"
+        },
+        {
+          "days": [
+            28
+          ],
+          "type": "exchange_only"
+        }
+      ]
     },
     {
       "id": "shop_core",

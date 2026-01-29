@@ -296,6 +296,17 @@ h1 {
     color: #111;
 }
 
+.ending-badge {
+    background-color: #ff5722; /* Deep Orange */
+    color: #fff;
+    font-weight: bold;
+}
+
+.text-last-day {
+    color: #ff5252; /* Red accent for text */
+    font-weight: bold;
+}
+
 /* Modal */
 .modal {
     position: fixed;

@@ -193,7 +193,18 @@ class EventCalculator {
                 result.statusLabel = this.dm.t('status.active');
             }
         }
-        result.detailLabel = this.dm.t('label.cycle_day', { day: currentDay });
+        if (event.showRemaining) {
+            const remaining = event.cycleDays - cyclePos;
+            if (remaining === 1) {
+                result.detailLabel = this.dm.t('label.last_day');
+            } else if (remaining === 2) {
+                result.detailLabel = this.dm.t('tag.ending_soon');
+            } else {
+                result.detailLabel = this.dm.t('label.remaining', { day: remaining });
+            }
+        } else {
+            result.detailLabel = this.dm.t('label.cycle_day', { day: currentDay });
+        }
     }
 
     _calcSeasonRounds(event, diff, result) {

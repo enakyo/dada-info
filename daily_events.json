@@ -1,0 +1,251 @@
+{
+  "date": "2026-01-29",
+  "generatedAt": "2026-01-29T04:47:53.982Z",
+  "events": [
+    {
+      "id": "mine_expedition",
+      "name": "月の鉱山遠征",
+      "type": "weekly_schedule",
+      "isActive": true,
+      "statusLabel": "準備期間",
+      "detailLabel": "マッチング確定",
+      "extraLabel": "",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 9525
+      }
+    },
+    {
+      "id": "limited_event",
+      "name": "期間限定イベント",
+      "type": "cycle_days",
+      "isActive": true,
+      "statusLabel": "開催中",
+      "detailLabel": "4日目",
+      "extraLabel": "",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 9,
+        "currentDay": 4
+      }
+    },
+    {
+      "id": "regular_challenge",
+      "name": "レギュラーチャレンジ",
+      "type": "cycle_days",
+      "isActive": true,
+      "statusLabel": "開催中",
+      "detailLabel": "2日目",
+      "extraLabel": "",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 7,
+        "currentDay": 2
+      }
+    },
+    {
+      "id": "echo",
+      "name": "末世反響",
+      "type": "season_rounds",
+      "isActive": true,
+      "statusLabel": "開催中",
+      "detailLabel": "第5ラウンド / 3日目",
+      "extraLabel": "",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 14
+      }
+    },
+    {
+      "id": "zone_op",
+      "name": "地域行動",
+      "type": "season_week_gates",
+      "isActive": true,
+      "statusLabel": "開催中",
+      "detailLabel": "第3週",
+      "extraLabel": "ステージ16-20開放 / 更新日",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 14
+      }
+    },
+    {
+      "id": "guild_exploration",
+      "name": "ギルド探索",
+      "type": "remaining_only",
+      "isActive": true,
+      "statusLabel": "開催中",
+      "detailLabel": "残り14日",
+      "extraLabel": "",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 14,
+        "remaining": 14
+      }
+    },
+    {
+      "id": "escape_op",
+      "name": "エスケープオペレーション",
+      "type": "cycle_days",
+      "isActive": true,
+      "statusLabel": "交換のみ",
+      "detailLabel": "最終日",
+      "extraLabel": "",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 27,
+        "currentDay": 28
+      }
+    },
+    {
+      "id": "shop_core",
+      "name": "汎用交換(神錬コア/SP欠片)",
+      "type": "remaining_only",
+      "isActive": true,
+      "statusLabel": "開催中",
+      "detailLabel": "残り3日",
+      "extraLabel": "",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 25,
+        "remaining": 3
+      }
+    },
+    {
+      "id": "shop_collection",
+      "name": "汎用交換(コレクション欠片)",
+      "type": "remaining_only",
+      "isActive": true,
+      "statusLabel": "開催中",
+      "detailLabel": "残り5日",
+      "extraLabel": "",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 23,
+        "remaining": 5
+      }
+    },
+    {
+      "id": "shop_pet",
+      "name": "汎用交換(ビスケット)",
+      "type": "weekly_update",
+      "isActive": true,
+      "statusLabel": "開催中",
+      "detailLabel": "残り4日",
+      "extraLabel": "",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 9525
+      }
+    },
+    {
+      "id": "shop_other",
+      "name": "その他アイテム交換",
+      "type": "remaining_only",
+      "isActive": true,
+      "statusLabel": "開催中",
+      "detailLabel": "残り17日",
+      "extraLabel": "",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 11,
+        "remaining": 17
+      }
+    },
+    {
+      "id": "pet_merchant",
+      "name": "ペット商人",
+      "type": "weekly_update",
+      "isActive": true,
+      "statusLabel": "開催中",
+      "detailLabel": "残り4日",
+      "extraLabel": "",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 9525
+      }
+    },
+    {
+      "id": "weekly_mission",
+      "name": "ウィークリーミッション",
+      "type": "weekly_update",
+      "isActive": true,
+      "statusLabel": "開催中",
+      "detailLabel": "残り4日",
+      "extraLabel": "",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 9525
+      }
+    },
+    {
+      "id": "path_of_trials",
+      "name": "試練の道",
+      "type": "remaining_only",
+      "isActive": true,
+      "statusLabel": "開催中",
+      "detailLabel": "残り4日",
+      "extraLabel": "",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 6,
+        "remaining": 4
+      }
+    },
+    {
+      "id": "survivor_pass",
+      "name": "サバイバーパス",
+      "type": "remaining_only",
+      "isActive": true,
+      "statusLabel": "開催中",
+      "detailLabel": "残り14日",
+      "extraLabel": "",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 14,
+        "remaining": 14
+      }
+    },
+    {
+      "id": "guild_shop",
+      "name": "ギルドショップ",
+      "type": "remaining_only",
+      "isActive": true,
+      "statusLabel": "開催中",
+      "detailLabel": "残り20日",
+      "extraLabel": "",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 8,
+        "remaining": 20
+      }
+    },
+    {
+      "id": "total_charge",
+      "name": "累計チャージ報酬",
+      "type": "remaining_only",
+      "isActive": true,
+      "statusLabel": "開催中",
+      "detailLabel": "残り17日",
+      "extraLabel": "",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 23,
+        "remaining": 17
+      }
+    },
+    {
+      "id": "online_match",
+      "name": "オンライン対戦",
+      "type": "weekly_update",
+      "isActive": true,
+      "statusLabel": "開催中",
+      "detailLabel": "残り4日",
+      "extraLabel": "",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 9525
+      }
+    }
+  ]
+}
