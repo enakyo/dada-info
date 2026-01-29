@@ -263,8 +263,44 @@ class EventCalculator {
         }
 
         result.detailLabel = this.dm.t('label.cycle_day', { day: currentDay });
-        // Remaining in cycle
-        // const remaining = event.cycleDays - cyclePos;
+
+        // Escape Operation Special Logic
+        if (event.id === 'escape_op') {
+            if (currentDay === 27) {
+                result.detailLabel = this.dm.t('label.last_day');
+                result.statusClass = 'text-last-day';
+            } else if (currentDay === 28) {
+                result.detailLabel = this.dm.t('status.finished');
+            }
+            // For other days, default day display or specific cycle logic
+            else if (event.showRemaining) {
+                // Standard remaining logic for other days if needed, but not requested specifically beyond 27/28
+                // If we want to keep "Last Day" / "Ending Soon" for generic cycle_days using showRemaining:
+                const remaining = event.cycleDays - cyclePos;
+                // But for Escape Op 28 cycle, Day 27 is remaining 2 so generic logic wouldn't trigger Last Day (remaining 1)
+            }
+        }
+        // Limited Event Special Logic
+        else if (event.id === 'limited_event') {
+            // If day 5 (Last active day), show Last Day in extraLabel
+            if (currentDay === 5) {
+                result.extraLabel = this.dm.t('label.last_day');
+            }
+            // Fallback to generically showing remaining if configured?
+            // But keep existing generic logic for others:
+        }
+        else if (event.showRemaining) {
+            const remaining = event.cycleDays - cyclePos;
+            if (remaining === 1) {
+                result.detailLabel = this.dm.t('label.last_day');
+                result.statusClass = 'text-last-day';
+            } else if (remaining === 2) {
+                result.detailLabel = this.dm.t('tag.ending_soon');
+                result.statusClass = 'tag-ending-soon';
+            } else {
+                result.detailLabel = this.dm.t('label.remaining', { day: remaining });
+            }
+        }
     }
 
     _calcSeasonRounds(event, diff, result) {
@@ -275,6 +311,11 @@ class EventCalculator {
         result.isActive = true;
         result.statusLabel = this.dm.t('status.active');
         result.detailLabel = `${this.dm.t('label.round', { round: roundIndex })} / ${this.dm.t('label.day', { day: dayInRound })}`;
+
+        // Echo Special Logic: Day 28 (seasonPos 27) is Tallying
+        if (event.id === 'echo' && seasonPos === 27) {
+            result.detailLabel = this.dm.t('label.tallying');
+        }
 
         // Check if season just started
         if (seasonPos === 0) result.isUpdateDay = true;
@@ -290,6 +331,12 @@ class EventCalculator {
         result.isActive = true;
         result.statusLabel = this.dm.t('status.active');
         result.detailLabel = this.dm.t('label.week', { week: weekIndex });
+
+        // Zone Op Special: Day 28 (seasonPos 27) -> Last Day
+        if (event.id === 'zone_op' && seasonPos === 27) {
+            result.detailLabel = this.dm.t('label.last_day');
+            result.statusClass = 'text-last-day';
+        }
 
         if (event.gates) {
             const gate = event.gates.find(g => g.week === weekIndex);
@@ -310,8 +357,14 @@ class EventCalculator {
         result.isActive = true;
         result.statusLabel = this.dm.t('status.active');
 
-        const labelKey = event.remainingLabelKey || 'label.remaining';
-        result.detailLabel = this.dm.t(labelKey, { day: remaining });
+        // Logic for value 1: "Last Day"
+        if (remaining === 1) {
+            result.detailLabel = this.dm.t('label.last_day');
+            result.statusClass = 'text-last-day';
+        } else {
+            const labelKey = event.remainingLabelKey || 'label.remaining';
+            result.detailLabel = this.dm.t(labelKey, { day: remaining });
+        }
 
         if (cyclePos === 0) result.isUpdateDay = true;
     }
@@ -336,7 +389,13 @@ class EventCalculator {
             result.detailLabel = this.dm.t('status.update_day');
             result.extraLabel = this.dm.t('label.next_update', { day: 7 });
         } else {
-            result.detailLabel = this.dm.t('label.next_update', { day: dayDiff });
+            // Logic for value 1: "Last Day"
+            if (dayDiff === 1) {
+                result.detailLabel = this.dm.t('label.last_day');
+                result.statusClass = 'text-last-day';
+            } else {
+                result.detailLabel = this.dm.t('label.next_update', { day: dayDiff });
+            }
         }
     }
 }

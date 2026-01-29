@@ -193,7 +193,19 @@ class EventCalculator {
                 result.statusLabel = this.dm.t('status.active');
             }
         }
-        if (event.showRemaining) {
+        result.detailLabel = this.dm.t('label.cycle_day', { day: currentDay });
+
+        if (event.id === 'escape_op') {
+            if (currentDay === 27) {
+                result.detailLabel = this.dm.t('label.last_day');
+            } else if (currentDay === 28) {
+                result.detailLabel = this.dm.t('status.finished');
+            }
+        } else if (event.id === 'limited_event') {
+            if (currentDay === 5) {
+                result.extraLabel = this.dm.t('label.last_day');
+            }
+        } else if (event.showRemaining) {
             const remaining = event.cycleDays - cyclePos;
             if (remaining === 1) {
                 result.detailLabel = this.dm.t('label.last_day');
@@ -202,8 +214,6 @@ class EventCalculator {
             } else {
                 result.detailLabel = this.dm.t('label.remaining', { day: remaining });
             }
-        } else {
-            result.detailLabel = this.dm.t('label.cycle_day', { day: currentDay });
         }
     }
 
@@ -227,6 +237,10 @@ class EventCalculator {
         result.statusLabel = this.dm.t('status.active');
         result.detailLabel = this.dm.t('label.week', { week: weekIndex });
 
+        if (event.id === 'zone_op' && seasonPos === 27) {
+            result.detailLabel = this.dm.t('label.last_day');
+        }
+
         if (event.gates) {
             const gate = event.gates.find(g => g.week === weekIndex);
             if (gate && gate.extraKey) {
@@ -245,8 +259,13 @@ class EventCalculator {
 
         result.isActive = true;
         result.statusLabel = this.dm.t('status.active');
-        const labelKey = event.remainingLabelKey || 'label.remaining';
-        result.detailLabel = this.dm.t(labelKey, { day: remaining });
+
+        if (remaining === 1) {
+            result.detailLabel = this.dm.t('label.last_day');
+        } else {
+            const labelKey = event.remainingLabelKey || 'label.remaining';
+            result.detailLabel = this.dm.t(labelKey, { day: remaining });
+        }
 
         if (cyclePos === 0) result.isUpdateDay = true;
     }
@@ -266,7 +285,11 @@ class EventCalculator {
             result.detailLabel = this.dm.t('status.update_day');
             result.extraLabel = this.dm.t('label.next_update', { day: 7 });
         } else {
-            result.detailLabel = this.dm.t('label.next_update', { day: dayDiff });
+            if (dayDiff === 1) {
+                result.detailLabel = this.dm.t('label.last_day');
+            } else {
+                result.detailLabel = this.dm.t('label.next_update', { day: dayDiff });
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "date": "2026-01-29",
-  "generatedAt": "2026-01-29T04:47:53.982Z",
+  "generatedAt": "2026-01-29T05:28:40.870Z",
   "events": [
     {
       "id": "mine_expedition",
@@ -89,7 +89,7 @@
       "type": "cycle_days",
       "isActive": true,
       "statusLabel": "交換のみ",
-      "detailLabel": "最終日",
+      "detailLabel": "終了",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {

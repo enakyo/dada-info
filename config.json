@@ -20,6 +20,7 @@
       "label.last_day": "最終日",
       "label.finished": "終了",
       "tag.ending_soon": "終了間近",
+      "label.tallying": "終了・集計",
       "label.next_update": "残り<span class='big-num'>{day}</span>日",
       "label.round": "第<span class='big-num'>{round}</span>ラウンド",
       "label.week": "第<span class='big-num'>{week}</span>週",
