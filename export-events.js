@@ -149,6 +149,7 @@ class EventCalculator {
             result.statusLabel = this.dm.t('status.preparation');
         } else if (dayConfig.type === 'finished') {
             result.statusLabel = this.dm.t('status.expedition_finished');
+            result.detailLabel = this.dm.t('status.finished');
         } else {
             result.statusLabel = this.dm.t('status.active');
         }
