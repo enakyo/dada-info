@@ -347,14 +347,14 @@
       "id": "shop_core",
       "type": "remaining_only",
       "nameKey": "event.shop_core",
-      "startDate": "2026-01-04",
+      "startDate": "2026-03-05",
       "cycleDays": 28
     },
     {
       "id": "shop_collection",
       "type": "remaining_only",
       "nameKey": "event.shop_collection",
-      "startDate": "2026-01-06",
+      "startDate": "2026-02-20",
       "cycleDays": 28,
       "remainingLabelKey": "label.next_update"
     },
@@ -409,7 +409,7 @@
       "type": "remaining_only",
       "nameKey": "event.total_charge",
       "startDate": "2026-01-06",
-      "cycleDays": 20
+      "cycleDays": 28
     },
     {
       "id": "online_match",
