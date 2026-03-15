@@ -1,4 +1,4 @@
-{
+﻿{
   "settings": {
     "defaultLang": "ja",
     "gameTimezoneOffset": 8
@@ -368,7 +368,7 @@
       "id": "shop_other",
       "type": "remaining_only",
       "nameKey": "event.shop_other",
-      "startDate": "2026-01-18",
+      "startDate": "2026-02-16",
       "cycleDays": 28
     },
     {
