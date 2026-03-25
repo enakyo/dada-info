@@ -197,10 +197,13 @@ class EventCalculator {
         result.detailLabel = this.dm.t('label.cycle_day', { day: currentDay });
 
         if (event.id === 'escape_op') {
+            const remaining = event.cycleDays - cyclePos;
             if (currentDay === 27) {
                 result.detailLabel = this.dm.t('label.last_day');
             } else if (currentDay === 28) {
                 result.detailLabel = this.dm.t('status.finished');
+            } else {
+                result.detailLabel = this.dm.t('label.remaining', { day: remaining });
             }
         } else if (event.id === 'limited_event') {
             if (currentDay === 5) {
@@ -233,14 +236,21 @@ class EventCalculator {
     _calcSeasonWeekGates(event, diff, result) {
         const seasonPos = diff % event.seasonDays;
         const weekIndex = Math.floor(seasonPos / 7) + 1;
+        const remaining = event.seasonDays - seasonPos;
 
         result.isActive = true;
         result.statusLabel = this.dm.t('status.active');
-        result.detailLabel = this.dm.t('label.week', { week: weekIndex });
+
+        let weekLabel = this.dm.t('label.week', { week: weekIndex });
+        let remainingLabel = '';
 
         if (event.id === 'zone_op' && seasonPos === 27) {
-            result.detailLabel = this.dm.t('label.last_day');
+            remainingLabel = this.dm.t('label.last_day');
+        } else {
+            remainingLabel = this.dm.t('label.remaining', { day: remaining });
         }
+        
+        result.detailLabel = `${weekLabel}・${remainingLabel}`;
 
         if (event.gates) {
             const gate = event.gates.find(g => g.week === weekIndex);

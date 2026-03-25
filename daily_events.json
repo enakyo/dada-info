@@ -1,6 +1,6 @@
 {
-  "date": "2026-03-22",
-  "generatedAt": "2026-03-22T05:36:59.794Z",
+  "date": "2026-03-25",
+  "generatedAt": "2026-03-25T00:42:58.289Z",
   "events": [
     {
       "id": "mine_expedition",
@@ -8,11 +8,11 @@
       "type": "weekly_schedule",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "対戦段階 / 3日目",
-      "extraLabel": "",
+      "detailLabel": "遠征段階",
+      "extraLabel": "24:50締切",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 9577
+        "diffDays": 9580
       }
     },
     {
@@ -21,12 +21,12 @@
       "type": "cycle_days",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "2日目",
-      "extraLabel": "",
+      "detailLabel": "5日目",
+      "extraLabel": "最終日",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 61,
-        "currentDay": 2
+        "diffDays": 64,
+        "currentDay": 5
       }
     },
     {
@@ -39,7 +39,7 @@
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 59,
+        "diffDays": 62,
         "currentDay": 3
       }
     },
@@ -49,11 +49,11 @@
       "type": "season_rounds",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "第4ラウンド / 2日目",
+      "detailLabel": "第5ラウンド / 2日目",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 66
+        "diffDays": 69
       }
     },
     {
@@ -62,11 +62,11 @@
       "type": "season_week_gates",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "第2週",
+      "detailLabel": "第2週・残り15日",
       "extraLabel": "ステージ11-15開放",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 66
+        "diffDays": 69
       }
     },
     {
@@ -75,12 +75,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り18日",
+      "detailLabel": "残り15日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 66,
-        "remaining": 18
+        "diffDays": 69,
+        "remaining": 15
       }
     },
     {
@@ -89,12 +89,12 @@
       "type": "cycle_days",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "24日目",
+      "detailLabel": "最終日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 79,
-        "currentDay": 24
+        "diffDays": 82,
+        "currentDay": 27
       }
     },
     {
@@ -103,44 +103,17 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り11日",
+      "detailLabel": "残り8日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 17,
-        "remaining": 11
+        "diffDays": 20,
+        "remaining": 8
       }
     },
     {
       "id": "shop_collection",
       "name": "汎用交換(コレクション欠片)",
-      "type": "remaining_only",
-      "isActive": true,
-      "statusLabel": "開催中",
-      "detailLabel": "残り26日",
-      "extraLabel": "",
-      "isUpdateDay": false,
-      "raw": {
-        "diffDays": 30,
-        "remaining": 26
-      }
-    },
-    {
-      "id": "shop_pet",
-      "name": "汎用交換(ビスケット)",
-      "type": "weekly_update",
-      "isActive": true,
-      "statusLabel": "開催中",
-      "detailLabel": "最終日",
-      "extraLabel": "",
-      "isUpdateDay": false,
-      "raw": {
-        "diffDays": 9577
-      }
-    },
-    {
-      "id": "shop_other",
-      "name": "その他アイテム交換",
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
@@ -153,16 +126,43 @@
       }
     },
     {
+      "id": "shop_pet",
+      "name": "汎用交換(ビスケット)",
+      "type": "weekly_update",
+      "isActive": true,
+      "statusLabel": "開催中",
+      "detailLabel": "残り5日",
+      "extraLabel": "",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 9580
+      }
+    },
+    {
+      "id": "shop_other",
+      "name": "その他アイテム交換",
+      "type": "remaining_only",
+      "isActive": true,
+      "statusLabel": "開催中",
+      "detailLabel": "残り20日",
+      "extraLabel": "",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 36,
+        "remaining": 20
+      }
+    },
+    {
       "id": "pet_merchant",
       "name": "ペット商人",
       "type": "weekly_update",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "最終日",
+      "detailLabel": "残り5日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 9577
+        "diffDays": 9580
       }
     },
     {
@@ -171,11 +171,11 @@
       "type": "weekly_update",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "最終日",
+      "detailLabel": "残り5日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 9577
+        "diffDays": 9580
       }
     },
     {
@@ -184,12 +184,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り2日",
+      "detailLabel": "残り4日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 58,
-        "remaining": 2
+        "diffDays": 61,
+        "remaining": 4
       }
     },
     {
@@ -198,12 +198,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り18日",
+      "detailLabel": "残り15日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 66,
-        "remaining": 18
+        "diffDays": 69,
+        "remaining": 15
       }
     },
     {
@@ -212,12 +212,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り24日",
+      "detailLabel": "残り21日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 60,
-        "remaining": 24
+        "diffDays": 63,
+        "remaining": 21
       }
     },
     {
@@ -226,12 +226,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "最終日",
+      "detailLabel": "残り18日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 19,
-        "remaining": 1
+        "diffDays": 22,
+        "remaining": 18
       }
     },
     {
@@ -240,11 +240,11 @@
       "type": "weekly_update",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "最終日",
+      "detailLabel": "残り5日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 9577
+        "diffDays": 9580
       }
     }
   ]

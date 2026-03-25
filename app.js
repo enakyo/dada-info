@@ -267,18 +267,14 @@ class EventCalculator {
 
         // Escape Operation Special Logic
         if (event.id === 'escape_op') {
+            const remaining = event.cycleDays - cyclePos;
             if (currentDay === 27) {
                 result.detailLabel = this.dm.t('label.last_day');
                 result.statusClass = 'text-last-day';
             } else if (currentDay === 28) {
                 result.detailLabel = this.dm.t('status.finished');
-            }
-            // For other days, default day display or specific cycle logic
-            else if (event.showRemaining) {
-                // Standard remaining logic for other days if needed, but not requested specifically beyond 27/28
-                // If we want to keep "Last Day" / "Ending Soon" for generic cycle_days using showRemaining:
-                const remaining = event.cycleDays - cyclePos;
-                // But for Escape Op 28 cycle, Day 27 is remaining 2 so generic logic wouldn't trigger Last Day (remaining 1)
+            } else {
+                result.detailLabel = this.dm.t('label.remaining', { day: remaining });
             }
         }
         // Limited Event Special Logic
@@ -328,16 +324,22 @@ class EventCalculator {
         // If startDate is aligned with the update weekday, simple division works.
         // Spec says: Starts 2026-01-15 (Thu), update is Thu. So 7-day chunks are correct.
         const weekIndex = Math.floor(seasonPos / 7) + 1;
+        const remaining = event.seasonDays - seasonPos;
 
         result.isActive = true;
         result.statusLabel = this.dm.t('status.active');
-        result.detailLabel = this.dm.t('label.week', { week: weekIndex });
 
-        // Zone Op Special: Day 28 (seasonPos 27) -> Last Day
+        let weekLabel = this.dm.t('label.week', { week: weekIndex });
+        let remainingLabel = '';
+
         if (event.id === 'zone_op' && seasonPos === 27) {
-            result.detailLabel = this.dm.t('label.last_day');
+            remainingLabel = this.dm.t('label.last_day');
             result.statusClass = 'text-last-day';
+        } else {
+            remainingLabel = this.dm.t('label.remaining', { day: remaining });
         }
+        
+        result.detailLabel = `${weekLabel}・${remainingLabel}`;
 
         if (event.gates) {
             const gate = event.gates.find(g => g.week === weekIndex);
