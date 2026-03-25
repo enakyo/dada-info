@@ -661,10 +661,11 @@ class UIManager {
             }
             
             if (show) {
+                let cleanCombined = combined.replace(/<[^>]*>/g, '');
                 if (alwaysShow.includes(event.id)) {
-                    listText.push(`●${name}：${combined}`);
+                    listText.push(`●${name}：${cleanCombined}`);
                 } else {
-                    otherText.push(`${name}：${combined}`);
+                    otherText.push(`${name}：${cleanCombined}`);
                 }
             }
         });
