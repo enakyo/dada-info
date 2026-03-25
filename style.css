@@ -430,3 +430,37 @@ h1 {
         display: none !important;
     }
 }
+.copy-section {
+  margin-top: 2rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.copy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.copy-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+#copy-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.5rem;
+  resize: vertical;
+  background: #f9f9f9;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}

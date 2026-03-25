@@ -445,6 +445,20 @@ class UIManager {
         this.btnClose.addEventListener('click', () => this.closeConfig());
         this.btnSave.addEventListener('click', () => this.saveConfig());
         this.btnReset.addEventListener('click', () => this.dm.reset());
+
+        const btnCopy = document.getElementById('copy-btn');
+        if (btnCopy) {
+            btnCopy.addEventListener('click', () => {
+                const ta = document.getElementById('copy-textarea');
+                if (ta) {
+                    ta.select();
+                    document.execCommand('copy');
+                    const originalText = btnCopy.textContent;
+                    btnCopy.textContent = 'コピーしました！';
+                    setTimeout(() => { btnCopy.textContent = originalText; }, 2000);
+                }
+            });
+        }
     }
 
     init() {
@@ -605,6 +619,63 @@ class UIManager {
 
         // Apply text fitting for event names
         this.fitTextEvents();
+        
+        this.generateCopyText();
+    }
+
+    generateCopyText() {
+        const events = this.dm.getEvents();
+        const alwaysShow = ['mine_expedition', 'limited_event', 'regular_challenge'];
+        const listText = [];
+        const otherText = [];
+        
+        events.forEach(event => {
+            const calc = this.ec.calculate(event, this.selectedDate);
+            if (!calc.isActive && calc.statusClass !== 'status-preparation') return;
+
+            const name = this.dm.t(calc.event.nameKey);
+            let val = calc.detailLabel || '';
+            let extra = calc.extraLabel || '';
+            let combined = val;
+            
+            if (extra) {
+                if (extra.includes('締切') || extra.includes('最終日') || extra.includes('更新日') || extra.includes('開始')) {
+                    combined += `(${extra})`;
+                } else {
+                    combined += combined ? ` / ${extra}` : extra;
+                }
+            }
+            if (calc.statusClass === 'status-preparation') {
+                combined = `${this.dm.t('status.preparation')}(${combined})`;
+            }
+
+            let show = false;
+            if (alwaysShow.includes(event.id)) {
+                show = true;
+            } else {
+                let textToCheck = combined + (calc.isUpdateDay ? '更新日' : '');
+                if (/(残り[123]日|終了間近|最終日|更新日|開始)/.test(textToCheck)) {
+                    show = true;
+                }
+                // Special case fallback if Echo needs to be shown for testing example purposes, but we stick strictly to regex.
+            }
+            
+            if (show) {
+                if (alwaysShow.includes(event.id)) {
+                    listText.push(`●${name}：${combined}`);
+                } else {
+                    otherText.push(`${name}：${combined}`);
+                }
+            }
+        });
+        
+        let finalText = listText.join('\n');
+        if (otherText.length > 0) {
+            finalText += '\n\n●その他更新状況\n' + otherText.join('\n');
+        }
+        
+        const ta = document.getElementById('copy-textarea');
+        if (ta) ta.value = finalText;
     }
 
     fitTextEvents() {
