@@ -1,18 +1,18 @@
 {
-  "date": "2026-03-29",
-  "generatedAt": "2026-03-28T16:50:17.404Z",
+  "date": "2026-03-30",
+  "generatedAt": "2026-03-29T16:50:38.604Z",
   "events": [
     {
       "id": "mine_expedition",
       "name": "月の鉱山遠征",
       "type": "weekly_schedule",
       "isActive": true,
-      "statusLabel": "開催中",
-      "detailLabel": "対戦段階 / 3日目",
+      "statusLabel": "遠征終了",
+      "detailLabel": "終了",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 9584
+        "diffDays": 9585
       }
     },
     {
@@ -21,12 +21,12 @@
       "type": "cycle_days",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "3日目",
+      "detailLabel": "4日目",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 68,
-        "currentDay": 3
+        "diffDays": 69,
+        "currentDay": 4
       }
     },
     {
@@ -35,12 +35,12 @@
       "type": "cycle_days",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "1日目",
-      "extraLabel": "更新日",
-      "isUpdateDay": true,
+      "detailLabel": "2日目",
+      "extraLabel": "",
+      "isUpdateDay": false,
       "raw": {
-        "diffDays": 66,
-        "currentDay": 1
+        "diffDays": 67,
+        "currentDay": 2
       }
     },
     {
@@ -49,11 +49,11 @@
       "type": "season_rounds",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "第6ラウンド / 3日目",
+      "detailLabel": "第7ラウンド / 1日目",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 73
+        "diffDays": 74
       }
     },
     {
@@ -62,11 +62,11 @@
       "type": "season_week_gates",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "第3週・残り11日",
+      "detailLabel": "第3週・残り10日",
       "extraLabel": "ステージ16-20開放",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 73
+        "diffDays": 74
       }
     },
     {
@@ -75,12 +75,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り11日",
+      "detailLabel": "残り10日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 73,
-        "remaining": 11
+        "diffDays": 74,
+        "remaining": 10
       }
     },
     {
@@ -89,12 +89,12 @@
       "type": "cycle_days",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り26日",
+      "detailLabel": "残り25日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 86,
-        "currentDay": 3
+        "diffDays": 87,
+        "currentDay": 4
       }
     },
     {
@@ -103,12 +103,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り4日",
+      "detailLabel": "残り3日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 24,
-        "remaining": 4
+        "diffDays": 25,
+        "remaining": 3
       }
     },
     {
@@ -117,12 +117,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り19日",
+      "detailLabel": "残り18日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 37,
-        "remaining": 19
+        "diffDays": 38,
+        "remaining": 18
       }
     },
     {
@@ -131,11 +131,11 @@
       "type": "weekly_update",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "最終日",
-      "extraLabel": "",
-      "isUpdateDay": false,
+      "detailLabel": "更新日",
+      "extraLabel": "残り7日",
+      "isUpdateDay": true,
       "raw": {
-        "diffDays": 9584
+        "diffDays": 9585
       }
     },
     {
@@ -144,12 +144,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り16日",
+      "detailLabel": "残り15日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 40,
-        "remaining": 16
+        "diffDays": 41,
+        "remaining": 15
       }
     },
     {
@@ -158,11 +158,11 @@
       "type": "weekly_update",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "最終日",
-      "extraLabel": "",
-      "isUpdateDay": false,
+      "detailLabel": "更新日",
+      "extraLabel": "残り7日",
+      "isUpdateDay": true,
       "raw": {
-        "diffDays": 9584
+        "diffDays": 9585
       }
     },
     {
@@ -171,11 +171,11 @@
       "type": "weekly_update",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "最終日",
-      "extraLabel": "",
-      "isUpdateDay": false,
+      "detailLabel": "更新日",
+      "extraLabel": "残り7日",
+      "isUpdateDay": true,
       "raw": {
-        "diffDays": 9584
+        "diffDays": 9585
       }
     },
     {
@@ -184,12 +184,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り5日",
+      "detailLabel": "残り4日",
       "extraLabel": "",
-      "isUpdateDay": true,
+      "isUpdateDay": false,
       "raw": {
-        "diffDays": 65,
-        "remaining": 5
+        "diffDays": 66,
+        "remaining": 4
       }
     },
     {
@@ -198,12 +198,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り11日",
+      "detailLabel": "残り10日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 73,
-        "remaining": 11
+        "diffDays": 74,
+        "remaining": 10
       }
     },
     {
@@ -212,12 +212,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り17日",
+      "detailLabel": "残り16日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 67,
-        "remaining": 17
+        "diffDays": 68,
+        "remaining": 16
       }
     },
     {
@@ -226,12 +226,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り14日",
+      "detailLabel": "残り13日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 26,
-        "remaining": 14
+        "diffDays": 27,
+        "remaining": 13
       }
     },
     {
@@ -240,11 +240,11 @@
       "type": "weekly_update",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "最終日",
-      "extraLabel": "",
-      "isUpdateDay": false,
+      "detailLabel": "更新日",
+      "extraLabel": "残り7日",
+      "isUpdateDay": true,
       "raw": {
-        "diffDays": 9584
+        "diffDays": 9585
       }
     }
   ]
