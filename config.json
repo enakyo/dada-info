@@ -59,7 +59,8 @@
       "extra.stages_1_10": "ステージ1-10開放",
       "extra.stages_11_15": "ステージ11-15開放",
       "extra.stages_16_20": "ステージ16-20開放",
-      "extra.extreme": "極限チャレンジ開放"
+      "extra.extreme": "極限チャレンジ開放",
+      "event.mystery_merchant": "謎の商人"
     },
     "en": {
       "title": "Survivor.io Event Info",
@@ -111,7 +112,8 @@
       "extra.stages_1_10": "Stages 1-10",
       "extra.stages_11_15": "Stages 11-15",
       "extra.stages_16_20": "Stages 16-20",
-      "extra.extreme": "Extreme Challenge"
+      "extra.extreme": "Extreme Challenge",
+      "event.mystery_merchant": "Mystery Merchant"
     },
     "zh": {
       "title": "弹壳特攻队 活动信息",
@@ -163,7 +165,8 @@
       "extra.stages_1_10": "开放1-10",
       "extra.stages_11_15": "开放11-15",
       "extra.stages_16_20": "开放16-20",
-      "extra.extreme": "极限挑战"
+      "extra.extreme": "极限挑战",
+      "event.mystery_merchant": "神秘商人"
     }
   },
   "events": [
@@ -172,6 +175,11 @@
       "type": "weekly_schedule",
       "nameKey": "event.mine_expedition",
       "schedule": {
+        "0": {
+          "type": "active",
+          "phaseKey": "phase.battle",
+          "subIndex": 3
+        },
         "1": {
           "type": "finished"
         },
@@ -198,11 +206,6 @@
           "type": "active",
           "phaseKey": "phase.battle",
           "subIndex": 2
-        },
-        "0": {
-          "type": "active",
-          "phaseKey": "phase.battle",
-          "subIndex": 3
         }
       }
     },
@@ -416,6 +419,13 @@
       "type": "weekly_update",
       "nameKey": "event.online_match",
       "updateWeekday": 1
+    },
+    {
+      "id": "mystery_merchant",
+      "type": "remaining_only",
+      "nameKey": "event.mystery_merchant",
+      "startDate": "2026-04-14",
+      "cycleDays": 3
     }
   ]
 }
