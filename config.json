@@ -302,7 +302,7 @@
       "id": "escape_op",
       "type": "cycle_days",
       "nameKey": "event.escape_op",
-      "startDate": "2026-01-02",
+      "startDate": "2026-05-21",
       "cycleDays": 28,
       "showRemaining": true,
       "phases": [
@@ -350,14 +350,14 @@
       "id": "shop_core",
       "type": "remaining_only",
       "nameKey": "event.shop_core",
-      "startDate": "2026-03-05",
+      "startDate": "2026-06-03",
       "cycleDays": 28
     },
     {
       "id": "shop_collection",
       "type": "remaining_only",
       "nameKey": "event.shop_collection",
-      "startDate": "2026-02-20",
+      "startDate": "2026-05-21",
       "cycleDays": 28,
       "remainingLabelKey": "label.next_update"
     },
@@ -371,7 +371,7 @@
       "id": "shop_other",
       "type": "remaining_only",
       "nameKey": "event.shop_other",
-      "startDate": "2026-02-17",
+      "startDate": "2026-05-18",
       "cycleDays": 28
     },
     {
@@ -411,7 +411,7 @@
       "id": "total_charge",
       "type": "remaining_only",
       "nameKey": "event.total_charge",
-      "startDate": "2026-03-03",
+      "startDate": "2026-05-26",
       "cycleDays": 20
     },
     {

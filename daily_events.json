@@ -1,6 +1,6 @@
 {
   "date": "2026-06-06",
-  "generatedAt": "2026-06-05T18:05:35.001Z",
+  "generatedAt": "2026-06-06T11:22:54.346Z",
   "events": [
     {
       "id": "mine_expedition",
@@ -89,12 +89,12 @@
       "type": "cycle_days",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り13日",
+      "detailLabel": "残り12日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 155,
-        "currentDay": 16
+        "diffDays": 16,
+        "currentDay": 17
       }
     },
     {
@@ -103,12 +103,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り19日",
+      "detailLabel": "残り25日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 93,
-        "remaining": 19
+        "diffDays": 3,
+        "remaining": 25
       }
     },
     {
@@ -117,12 +117,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り6日",
+      "detailLabel": "残り12日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 106,
-        "remaining": 6
+        "diffDays": 16,
+        "remaining": 12
       }
     },
     {
@@ -144,12 +144,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り3日",
+      "detailLabel": "残り9日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 109,
-        "remaining": 3
+        "diffDays": 19,
+        "remaining": 9
       }
     },
     {
@@ -226,12 +226,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り5日",
+      "detailLabel": "残り9日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 95,
-        "remaining": 5
+        "diffDays": 11,
+        "remaining": 9
       }
     },
     {
