@@ -464,3 +464,16 @@ h1 {
   line-height: 1.4;
   white-space: pre-wrap;
 }
+/* Footer Styles */
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.last-updated {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
