@@ -37,7 +37,7 @@
       "event.regular_challenge": "レギュラーチャレンジ",
       "event.echo": "末世反響",
       "event.zone_op": "地域行動",
-      "event.guild_exploration": "ギルド探索",
+      "event.guild_exploration": "新・ギルド探索",
       "event.escape_op": "エスケープオペレーション",
       "event.shop_core": "汎用交換(神錬コア/SP欠片)",
       "event.shop_collection": "汎用交換(コレクション欠片)",
@@ -213,7 +213,7 @@
       "id": "limited_event",
       "type": "cycle_days",
       "nameKey": "event.limited",
-      "startDate": "2026-08-01",
+      "startDate": "2026-07-31",
       "cycleDays": 6,
       "phases": [
         {
@@ -357,8 +357,8 @@
       "id": "shop_collection",
       "type": "remaining_only",
       "nameKey": "event.shop_collection",
-      "startDate": "2026-05-21",
-      "cycleDays": 28,
+      "startDate": "2026-07-22",
+      "cycleDays": 56,
       "remainingLabelKey": "label.next_update"
     },
     {
@@ -371,7 +371,7 @@
       "id": "shop_other",
       "type": "remaining_only",
       "nameKey": "event.shop_other",
-      "startDate": "2026-05-18",
+      "startDate": "2026-07-17",
       "cycleDays": 28
     },
     {
@@ -411,7 +411,7 @@
       "id": "total_charge",
       "type": "remaining_only",
       "nameKey": "event.total_charge",
-      "startDate": "2026-05-26",
+      "startDate": "2026-07-21",
       "cycleDays": 20
     },
     {

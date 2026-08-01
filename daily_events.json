@@ -1,6 +1,6 @@
 {
   "date": "2026-08-02",
-  "generatedAt": "2026-08-01T23:07:26.800Z",
+  "generatedAt": "2026-08-01T23:13:43.735Z",
   "events": [
     {
       "id": "mine_expedition",
@@ -21,12 +21,12 @@
       "type": "cycle_days",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "2日目",
+      "detailLabel": "3日目",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 1,
-        "currentDay": 2
+        "diffDays": 2,
+        "currentDay": 3
       }
     },
     {
@@ -71,7 +71,7 @@
     },
     {
       "id": "guild_exploration",
-      "name": "ギルド探索",
+      "name": "新・ギルド探索",
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
@@ -117,12 +117,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り11日",
+      "detailLabel": "残り45日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 73,
-        "remaining": 11
+        "diffDays": 11,
+        "remaining": 45
       }
     },
     {
@@ -144,12 +144,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り8日",
+      "detailLabel": "残り12日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 76,
-        "remaining": 8
+        "diffDays": 16,
+        "remaining": 12
       }
     },
     {
@@ -226,12 +226,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り12日",
+      "detailLabel": "残り8日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 68,
-        "remaining": 12
+        "diffDays": 12,
+        "remaining": 8
       }
     },
     {
