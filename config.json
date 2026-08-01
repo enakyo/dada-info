@@ -213,7 +213,7 @@
       "id": "limited_event",
       "type": "cycle_days",
       "nameKey": "event.limited",
-      "startDate": "2026-01-20",
+      "startDate": "2026-08-01",
       "cycleDays": 6,
       "phases": [
         {
@@ -295,8 +295,8 @@
       "id": "guild_exploration",
       "type": "remaining_only",
       "nameKey": "event.guild_exploration",
-      "startDate": "2026-01-15",
-      "cycleDays": 28
+      "startDate": "2026-07-30",
+      "cycleDays": 7
     },
     {
       "id": "escape_op",
@@ -350,7 +350,7 @@
       "id": "shop_core",
       "type": "remaining_only",
       "nameKey": "event.shop_core",
-      "startDate": "2026-06-03",
+      "startDate": "2026-08-02",
       "cycleDays": 28
     },
     {

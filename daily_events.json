@@ -1,6 +1,6 @@
 {
   "date": "2026-08-02",
-  "generatedAt": "2026-08-01T17:11:26.562Z",
+  "generatedAt": "2026-08-01T23:07:26.800Z",
   "events": [
     {
       "id": "mine_expedition",
@@ -21,12 +21,12 @@
       "type": "cycle_days",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "3日目",
+      "detailLabel": "2日目",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 194,
-        "currentDay": 3
+        "diffDays": 1,
+        "currentDay": 2
       }
     },
     {
@@ -75,12 +75,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り25日",
+      "detailLabel": "残り4日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 199,
-        "remaining": 25
+        "diffDays": 3,
+        "remaining": 4
       }
     },
     {
@@ -103,12 +103,12 @@
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り24日",
+      "detailLabel": "残り28日",
       "extraLabel": "",
-      "isUpdateDay": false,
+      "isUpdateDay": true,
       "raw": {
-        "diffDays": 60,
-        "remaining": 24
+        "diffDays": 0,
+        "remaining": 28
       }
     },
     {
