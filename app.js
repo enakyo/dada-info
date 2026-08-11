@@ -277,6 +277,16 @@ class EventCalculator {
                 result.detailLabel = this.dm.t('label.remaining', { day: remaining });
             }
         }
+        // Mission Reward & Limited Reward Special Logic
+        else if (event.id === 'mission_reward' || event.id === 'limited_reward') {
+            const remaining = 3 - cyclePos;
+            if (currentDay === 3) {
+                result.detailLabel = this.dm.t('label.last_day');
+                result.statusClass = 'text-last-day';
+            } else {
+                result.detailLabel = this.dm.t('label.remaining', { day: remaining });
+            }
+        }
         // Limited Event Special Logic
         else if (event.id === 'limited_event') {
             // If day 5 (Last active day), show Last Day in extraLabel

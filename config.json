@@ -60,7 +60,9 @@
       "extra.stages_11_15": "ステージ11-15開放",
       "extra.stages_16_20": "ステージ16-20開放",
       "extra.extreme": "極限チャレンジ開放",
-      "event.mystery_merchant": "謎の商人"
+      "event.mystery_merchant": "謎の商人",
+      "event.mission_reward": "ミッション報酬",
+      "event.limited_reward": "期間限定報酬"
     },
     "en": {
       "title": "Survivor.io Event Info",
@@ -113,7 +115,9 @@
       "extra.stages_11_15": "Stages 11-15",
       "extra.stages_16_20": "Stages 16-20",
       "extra.extreme": "Extreme Challenge",
-      "event.mystery_merchant": "Mystery Merchant"
+      "event.mystery_merchant": "Mystery Merchant",
+      "event.mission_reward": "Mission Reward",
+      "event.limited_reward": "Limited Reward"
     },
     "zh": {
       "title": "弹壳特攻队 活动信息",
@@ -166,7 +170,9 @@
       "extra.stages_11_15": "开放11-15",
       "extra.stages_16_20": "开放16-20",
       "extra.extreme": "极限挑战",
-      "event.mystery_merchant": "神秘商人"
+      "event.mystery_merchant": "神秘商人",
+      "event.mission_reward": "任务奖励",
+      "event.limited_reward": "限时奖励"
     }
   },
   "events": [
@@ -426,6 +432,40 @@
       "nameKey": "event.mystery_merchant",
       "startDate": "2026-04-14",
       "cycleDays": 3
+    },
+    {
+      "id": "mission_reward",
+      "type": "cycle_days",
+      "nameKey": "event.mission_reward",
+      "startDate": "2026-08-11",
+      "cycleDays": 6,
+      "phases": [
+        {
+          "days": [
+            1,
+            2,
+            3
+          ],
+          "type": "active"
+        }
+      ]
+    },
+    {
+      "id": "limited_reward",
+      "type": "cycle_days",
+      "nameKey": "event.limited_reward",
+      "startDate": "2026-08-11",
+      "cycleDays": 6,
+      "phases": [
+        {
+          "days": [
+            1,
+            2,
+            3
+          ],
+          "type": "active"
+        }
+      ]
     }
   ]
 }

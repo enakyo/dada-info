@@ -205,6 +205,13 @@ class EventCalculator {
             } else {
                 result.detailLabel = this.dm.t('label.remaining', { day: remaining });
             }
+        } else if (event.id === 'mission_reward' || event.id === 'limited_reward') {
+            const remaining = 3 - cyclePos;
+            if (currentDay === 3) {
+                result.detailLabel = this.dm.t('label.last_day');
+            } else {
+                result.detailLabel = this.dm.t('label.remaining', { day: remaining });
+            }
         } else if (event.id === 'limited_event') {
             if (currentDay === 5) {
                 result.extraLabel = this.dm.t('label.last_day');
