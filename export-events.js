@@ -197,7 +197,7 @@ class EventCalculator {
         result.detailLabel = this.dm.t('label.cycle_day', { day: currentDay });
 
         if (event.id === 'escape_op') {
-            const remaining = event.cycleDays - cyclePos;
+            const remaining = 27 - currentDay;
             if (currentDay === 27) {
                 result.detailLabel = this.dm.t('label.last_day');
             } else if (currentDay === 28) {

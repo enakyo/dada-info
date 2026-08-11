@@ -1,6 +1,6 @@
 {
   "date": "2026-08-11",
-  "generatedAt": "2026-08-10T17:05:18.349Z",
+  "generatedAt": "2026-08-11T12:14:51.033Z",
   "events": [
     {
       "id": "mine_expedition",
@@ -89,12 +89,12 @@
       "type": "cycle_days",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "最終日",
+      "detailLabel": "残り2日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 82,
-        "currentDay": 27
+        "diffDays": 24,
+        "currentDay": 25
       }
     },
     {
