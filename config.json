@@ -422,8 +422,8 @@
       "id": "total_charge",
       "type": "remaining_only",
       "nameKey": "event.total_charge",
-      "startDate": "2026-07-21",
-      "cycleDays": 20
+      "startDate": "2026-09-07",
+      "cycleDays": 28
     },
     {
       "id": "online_match",
