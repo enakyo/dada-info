@@ -705,6 +705,10 @@ class UIManager {
                     combined += combined ? ` / ${extra}` : extra;
                 }
             }
+            const updateLabel = this.dm.t('status.update_day');
+            if (calc.isUpdateDay && !combined.includes(updateLabel)) {
+                combined += `(${updateLabel})`;
+            }
             if (calc.statusClass === 'status-preparation') {
                 combined = `${this.dm.t('status.preparation')}(${combined})`;
             }
