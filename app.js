@@ -624,6 +624,28 @@ class UIManager {
               <div class="event-col-info">${infoHtml}</div>
             `;
 
+            if (event.infoKey) {
+                const infoWrapper = document.createElement('span');
+                const infoButton = document.createElement('button');
+                const tooltip = document.createElement('span');
+                const tooltipId = `event-info-${event.id}`;
+
+                infoWrapper.className = 'event-info';
+                infoButton.className = 'event-info-button';
+                infoButton.type = 'button';
+                infoButton.textContent = 'ⓘ';
+                infoButton.setAttribute('aria-label', `${name} information`);
+                infoButton.setAttribute('aria-describedby', tooltipId);
+                tooltip.className = 'event-tooltip';
+                tooltip.id = tooltipId;
+                tooltip.setAttribute('role', 'tooltip');
+                tooltip.textContent = this.dm.t(event.infoKey);
+
+                infoWrapper.appendChild(infoButton);
+                infoWrapper.appendChild(tooltip);
+                card.querySelector('.event-name-text').after(infoWrapper);
+            }
+
             this.elEventList.appendChild(card);
         });
 

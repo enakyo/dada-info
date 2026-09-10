@@ -1,6 +1,6 @@
 {
   "date": "2026-09-10",
-  "generatedAt": "2026-09-10T13:49:48.245Z",
+  "generatedAt": "2026-09-10T14:16:56.031Z",
   "events": [
     {
       "id": "mine_expedition",
@@ -100,16 +100,16 @@
     },
     {
       "id": "shop_core",
-      "name": "汎用交換(神錬コア/SP欠片)",
+      "name": "汎用交換(神錬コア/SP万能欠片)",
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り17日",
+      "detailLabel": "残り19日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 39,
-        "remaining": 17
+        "diffDays": 9,
+        "remaining": 19
       }
     },
     {
@@ -128,7 +128,7 @@
     },
     {
       "id": "shop_pet",
-      "name": "汎用交換(ビスケット)",
+      "name": "汎用交換(ビスケット/復活コイン)",
       "type": "weekly_update",
       "isActive": true,
       "statusLabel": "開催中",
@@ -140,17 +140,45 @@
       }
     },
     {
+      "id": "shop_advanced_collection_heart",
+      "name": "汎用交換(上級コレクションのハート)",
+      "type": "remaining_only",
+      "isActive": true,
+      "statusLabel": "開催中",
+      "detailLabel": "残り5日",
+      "extraLabel": "",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 23,
+        "remaining": 5
+      }
+    },
+    {
+      "id": "vehicle_crystal",
+      "name": "乗り物晶石",
+      "type": "remaining_only",
+      "isActive": true,
+      "statusLabel": "開催中",
+      "detailLabel": "残り7日",
+      "extraLabel": "",
+      "isUpdateDay": false,
+      "raw": {
+        "diffDays": 21,
+        "remaining": 7
+      }
+    },
+    {
       "id": "shop_other",
       "name": "その他アイテム交換",
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "最終日",
+      "detailLabel": "残り3日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 55,
-        "remaining": 1
+        "diffDays": 25,
+        "remaining": 3
       }
     },
     {

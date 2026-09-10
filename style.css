@@ -189,7 +189,15 @@ h1 {
     /* Lines color */
     border: 1px solid var(--border-color);
     border-radius: 6px;
-    overflow: hidden;
+    overflow: visible;
+}
+
+.event-row:first-child {
+    border-radius: 6px 6px 0 0;
+}
+
+.event-row:last-child {
+    border-radius: 0 0 6px 6px;
 }
 
 .event-row {
@@ -429,6 +437,72 @@ h1 {
     .mobile-hidden {
         display: none !important;
     }
+}
+
+.event-info {
+    position: relative;
+    display: inline-flex;
+    flex-shrink: 0;
+}
+
+.event-info-button {
+    appearance: none;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: var(--text-secondary);
+    font: inherit;
+    line-height: 1;
+    cursor: help;
+}
+
+.event-info-button:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    border-radius: 50%;
+}
+
+.event-tooltip {
+    position: absolute;
+    z-index: 20;
+    top: calc(100% + 8px);
+    left: 50%;
+    width: min(360px, calc(100vw - 48px));
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: #111;
+    color: var(--text-primary);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+    font-size: 0.78rem;
+    font-weight: 400;
+    line-height: 1.55;
+    white-space: normal;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-35%, -4px);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    pointer-events: none;
+}
+
+.event-tooltip::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 35%;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+    background: #111;
+    transform: rotate(45deg);
+}
+
+.event-info:hover .event-tooltip,
+.event-info:focus-within .event-tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-35%, 0);
 }
 .copy-section {
   margin-top: 2rem;
