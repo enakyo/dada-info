@@ -1,0 +1,13 @@
+Generating event data...
+Failed to load config.json: SyntaxError: Unexpected token '﻿', "﻿{
+  "set"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at DataManager.load (C:\Users\enaky\.gemini\antigravity\brain\ea0fec48-bcdd-48ed-8a04-202aeda6fd08\dada-info\export-events.js:51:32)
+    at main (C:\Users\enaky\.gemini\antigravity\brain\ea0fec48-bcdd-48ed-8a04-202aeda6fd08\dada-info\export-events.js:305:8)
+    at Object.<anonymous> (C:\Users\enaky\.gemini\antigravity\brain\ea0fec48-bcdd-48ed-8a04-202aeda6fd08\dada-info\export-events.js:330:1)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
