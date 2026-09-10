@@ -1,6 +1,6 @@
 {
   "date": "2026-09-10",
-  "generatedAt": "2026-09-10T14:16:56.031Z",
+  "generatedAt": "2026-09-10T14:29:05.940Z",
   "events": [
     {
       "id": "mine_expedition",
@@ -155,7 +155,7 @@
     },
     {
       "id": "vehicle_crystal",
-      "name": "乗り物晶石",
+      "name": "汎用交換(乗り物晶石)",
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",
