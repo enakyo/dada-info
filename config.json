@@ -447,7 +447,13 @@
       "phases": [
         {
           "days": [
-            1,
+            1
+          ],
+          "type": "active",
+          "isUpdateDay": true
+        },
+        {
+          "days": [
             2,
             3
           ],
@@ -464,7 +470,13 @@
       "phases": [
         {
           "days": [
-            1,
+            1
+          ],
+          "type": "active",
+          "isUpdateDay": true
+        },
+        {
+          "days": [
             2,
             3
           ],

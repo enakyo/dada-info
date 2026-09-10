@@ -469,6 +469,20 @@ class UIManager {
                 }
             });
         }
+
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('.event-info')) this.closeEventInfo();
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') this.closeEventInfo();
+        });
+    }
+
+    closeEventInfo() {
+        document.querySelectorAll('.event-info.is-open').forEach(info => {
+            info.classList.remove('is-open');
+            info.querySelector('.event-info-button')?.setAttribute('aria-expanded', 'false');
+        });
     }
 
     init() {
@@ -636,6 +650,7 @@ class UIManager {
                 infoButton.textContent = 'ⓘ';
                 infoButton.setAttribute('aria-label', `${name} information`);
                 infoButton.setAttribute('aria-describedby', tooltipId);
+                infoButton.setAttribute('aria-expanded', 'false');
                 tooltip.className = 'event-tooltip';
                 tooltip.id = tooltipId;
                 tooltip.setAttribute('role', 'tooltip');
@@ -644,6 +659,19 @@ class UIManager {
                 infoWrapper.appendChild(infoButton);
                 infoWrapper.appendChild(tooltip);
                 card.querySelector('.event-name-text').after(infoWrapper);
+
+                infoButton.addEventListener('click', (clickEvent) => {
+                    clickEvent.stopPropagation();
+                    const shouldOpen = !infoWrapper.classList.contains('is-open');
+                    this.closeEventInfo();
+
+                    if (shouldOpen) {
+                        infoWrapper.classList.add('is-open');
+                        infoButton.setAttribute('aria-expanded', 'true');
+                    } else {
+                        infoButton.blur();
+                    }
+                });
             }
 
             this.elEventList.appendChild(card);

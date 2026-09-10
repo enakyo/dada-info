@@ -1,6 +1,6 @@
 {
   "date": "2026-09-10",
-  "generatedAt": "2026-09-10T14:29:05.940Z",
+  "generatedAt": "2026-09-10T14:37:09.614Z",
   "events": [
     {
       "id": "mine_expedition",
@@ -297,8 +297,8 @@
       "isActive": true,
       "statusLabel": "開催中",
       "detailLabel": "残り3日",
-      "extraLabel": "",
-      "isUpdateDay": false,
+      "extraLabel": "更新日",
+      "isUpdateDay": true,
       "raw": {
         "diffDays": 30,
         "currentDay": 1
@@ -311,8 +311,8 @@
       "isActive": true,
       "statusLabel": "開催中",
       "detailLabel": "残り3日",
-      "extraLabel": "",
-      "isUpdateDay": false,
+      "extraLabel": "更新日",
+      "isUpdateDay": true,
       "raw": {
         "diffDays": 30,
         "currentDay": 1
