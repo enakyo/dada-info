@@ -298,7 +298,7 @@
       "id": "escape_op",
       "type": "cycle_days",
       "nameKey": "event.escape_op",
-      "startDate": "2026-07-18",
+      "startDate": "2026-07-17",
       "cycleDays": 28,
       "showRemaining": true,
       "phases": [

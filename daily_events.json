@@ -1,6 +1,6 @@
 {
   "date": "2026-09-10",
-  "generatedAt": "2026-09-10T14:41:57.044Z",
+  "generatedAt": "2026-09-10T14:56:26.794Z",
   "events": [
     {
       "id": "mine_expedition",
@@ -89,13 +89,13 @@
       "name": "エスケープオペレーション",
       "type": "cycle_days",
       "isActive": true,
-      "statusLabel": "開催中",
-      "detailLabel": "最終日",
+      "statusLabel": "交換のみ",
+      "detailLabel": "終了",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
-        "diffDays": 54,
-        "currentDay": 27
+        "diffDays": 55,
+        "currentDay": 28
       }
     },
     {
