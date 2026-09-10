@@ -569,6 +569,20 @@ footer {
     border-top: 1px solid var(--border-color);
 }
 
+.privacy-link {
+    margin: 0 0 0.5rem;
+    font-size: 0.85rem;
+}
+
+.privacy-link a {
+    color: var(--text-secondary);
+}
+
+.privacy-link a:hover,
+.privacy-link a:focus-visible {
+    color: var(--text-primary);
+}
+
 .last-updated {
     font-size: 0.8rem;
     color: var(--text-secondary);
