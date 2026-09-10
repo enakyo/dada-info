@@ -498,18 +498,11 @@ h1 {
     transform: rotate(45deg);
 }
 
-.event-info.is-open .event-tooltip {
+.event-info.is-open .event-tooltip,
+.event-info.is-hovered .event-tooltip {
     visibility: visible;
     opacity: 1;
     transform: translate(-35%, 0);
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .event-info:hover .event-tooltip {
-        visibility: visible;
-        opacity: 1;
-        transform: translate(-35%, 0);
-    }
 }
 .copy-section {
   margin-top: 2rem;

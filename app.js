@@ -479,8 +479,8 @@ class UIManager {
     }
 
     closeEventInfo() {
-        document.querySelectorAll('.event-info.is-open').forEach(info => {
-            info.classList.remove('is-open');
+        document.querySelectorAll('.event-info.is-open, .event-info.is-hovered').forEach(info => {
+            info.classList.remove('is-open', 'is-hovered');
             info.querySelector('.event-info-button')?.setAttribute('aria-expanded', 'false');
         });
     }
@@ -660,6 +660,12 @@ class UIManager {
                 infoWrapper.appendChild(tooltip);
                 card.querySelector('.event-name-text').after(infoWrapper);
 
+                infoButton.addEventListener('pointerenter', (pointerEvent) => {
+                    if (pointerEvent.pointerType === 'mouse') infoWrapper.classList.add('is-hovered');
+                });
+                infoButton.addEventListener('pointerleave', () => {
+                    infoWrapper.classList.remove('is-hovered');
+                });
                 infoButton.addEventListener('click', (clickEvent) => {
                     clickEvent.stopPropagation();
                     const shouldOpen = !infoWrapper.classList.contains('is-open');
@@ -694,8 +700,10 @@ class UIManager {
             if (!calc.isActive && calc.statusClass !== 'status-preparation') return;
 
             const name = this.dm.t(calc.event.nameKey);
+            const updateLabel = this.dm.t('status.update_day');
             let val = calc.detailLabel || '';
             let extra = calc.extraLabel || '';
+            if (calc.isUpdateDay && val === updateLabel) val = '';
             let combined = val;
             
             if (extra) {
@@ -705,7 +713,6 @@ class UIManager {
                     combined += combined ? ` / ${extra}` : extra;
                 }
             }
-            const updateLabel = this.dm.t('status.update_day');
             if (calc.isUpdateDay && !combined.includes(updateLabel)) {
                 combined += `(${updateLabel})`;
             }
