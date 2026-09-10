@@ -422,6 +422,7 @@ class UIManager {
 
         this.currentDate = this.tm.getGameDate();
         this.selectedDate = new Date(this.currentDate);
+        this.viewDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth(), 1);
 
         // DOM Elements
         this.elTitle = document.getElementById('app-title');
@@ -447,6 +448,7 @@ class UIManager {
         document.getElementById('next-month').addEventListener('click', () => this.moveMonth(1));
         document.getElementById('today-btn').addEventListener('click', () => {
             this.selectedDate = new Date(this.tm.getGameDate());
+            this.viewDate = new Date(this.selectedDate.getFullYear(), this.selectedDate.getMonth(), 1);
             this.renderCalendar();
             this.renderEventList();
         });
@@ -496,14 +498,14 @@ class UIManager {
     }
 
     moveMonth(delta) {
-        this.selectedDate.setMonth(this.selectedDate.getMonth() + delta);
+        this.viewDate = new Date(this.viewDate.getFullYear(), this.viewDate.getMonth() + delta, 1);
         this.renderCalendar();
     }
 
     // Render main calendar view
     renderCalendar() {
-        const year = this.selectedDate.getFullYear();
-        const month = this.selectedDate.getMonth(); // 0-indexed
+        const year = this.viewDate.getFullYear();
+        const month = this.viewDate.getMonth(); // 0-indexed
 
         // Header Label: Main view year/month - Localized
         this.elCurrentMonth.textContent = this._formatMonth(year, month);
