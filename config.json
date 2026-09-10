@@ -273,29 +273,10 @@
     },
     {
       "id": "zone_op",
-      "type": "season_week_gates",
+      "type": "remaining_only",
       "nameKey": "event.zone_op",
       "startDate": "2026-01-15",
-      "seasonDays": 28,
-      "updateWeekday": 4,
-      "gates": [
-        {
-          "week": 1,
-          "extraKey": "extra.stages_1_10"
-        },
-        {
-          "week": 2,
-          "extraKey": "extra.stages_11_15"
-        },
-        {
-          "week": 3,
-          "extraKey": "extra.stages_16_20"
-        },
-        {
-          "week": 4,
-          "extraKey": "extra.extreme"
-        }
-      ]
+      "cycleDays": 28
     },
     {
       "id": "guild_exploration",
