@@ -90,7 +90,7 @@
       "type": "cycle_days",
       "isActive": true,
       "statusLabel": "開催中",
-      "detailLabel": "残り25日",
+      "detailLabel": "残り26日",
       "extraLabel": "",
       "isUpdateDay": false,
       "raw": {
@@ -169,7 +169,7 @@
     },
     {
       "id": "shop_other",
-      "name": "その他アイテム交換",
+      "name": "汎用交換(その他アイテム)",
       "type": "remaining_only",
       "isActive": true,
       "statusLabel": "開催中",

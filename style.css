@@ -215,6 +215,28 @@ h1 {
     overflow: visible;
 }
 
+.event-group-heading {
+    margin: 0;
+    padding: 11px 14px;
+    border-left: 5px solid var(--group-color);
+    background-color: var(--group-bg);
+    color: var(--group-color);
+    font-size: 0.98rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.event-group-heading--guild { --group-color: #81c784; --group-bg: #213429; }
+.event-group-heading--exchange { --group-color: #80cbc4; --group-bg: #203633; }
+.event-group-heading--event { --group-color: #ffcc80; --group-bg: #3b3020; }
+.event-group-heading--permanent { --group-color: #b39ddb; --group-bg: #30283b; }
+.event-group-heading--shop_reward { --group-color: #90caf9; --group-bg: #233342; }
+.event-group-heading--other { --group-color: #bdbdbd; --group-bg: #303030; }
+
+.event-group-heading:first-child {
+    border-radius: 6px 6px 0 0;
+}
+
 .event-row:first-child {
     border-radius: 6px 6px 0 0;
 }
@@ -226,8 +248,12 @@ h1 {
 .event-row {
     display: flex;
     background-color: var(--card-bg);
-    padding: 8px 12px;
+    padding: 8px 12px 8px 25px;
     align-items: center;
+}
+
+.event-group-heading + .event-row {
+    padding-top: 11px;
 }
 
 .event-row:hover {
@@ -284,6 +310,36 @@ h1 {
     align-items: flex-end;
     white-space: nowrap;
     flex-shrink: 0;
+}
+
+@media (max-width: 599px) {
+    .event-row {
+        gap: 8px;
+        padding: 10px 9px 10px 20px;
+        align-items: flex-start;
+    }
+
+    .event-col-name {
+        flex: 1 1 auto;
+        flex-wrap: wrap;
+        gap: 3px 5px;
+        line-height: 1.4;
+    }
+
+    .event-name-text {
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .event-col-info {
+        flex: 0 0 70px;
+        font-size: 0.8rem;
+    }
+
+    .event-group-heading {
+        padding: 10px 11px;
+        font-size: 0.94rem;
+    }
 }
 
 .info-primary {
@@ -527,6 +583,26 @@ h1 {
     opacity: 1;
     transform: translate(-35%, 0);
 }
+
+@media (max-width: 599px) {
+    .event-tooltip {
+        position: fixed;
+        top: 18vh;
+        left: 16px;
+        right: 16px;
+        width: auto;
+        transform: none;
+    }
+
+    .event-tooltip::before {
+        display: none;
+    }
+
+    .event-info.is-open .event-tooltip,
+    .event-info.is-hovered .event-tooltip {
+        transform: none;
+    }
+}
 .copy-section {
   margin-top: 2rem;
   background: white;
@@ -546,6 +622,21 @@ h1 {
   margin: 0;
   font-size: 1.1rem;
   color: #333;
+}
+
+#copy-btn {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 599px) {
+  .copy-header {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .copy-header h3 {
+    font-size: 0.88rem;
+  }
 }
 
 #copy-textarea {

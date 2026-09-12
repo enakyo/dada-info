@@ -12,6 +12,13 @@
 const CONFIG_PATH = 'config.json';
 const STORAGE_KEY_CONFIG = 'dada_info_config';
 const MS_PER_DAY = 86400000;
+const EVENT_GROUPS = [
+    { nameKey: 'group.guild', ids: ['mine_expedition', 'guild_exploration', 'guild_shop', 'mystery_merchant'] },
+    { nameKey: 'group.exchange', ids: ['shop_core', 'shop_collection', 'shop_pet', 'shop_advanced_collection_heart', 'vehicle_crystal', 'shop_other'] },
+    { nameKey: 'group.event', ids: ['limited_event', 'mission_reward', 'limited_reward'] },
+    { nameKey: 'group.permanent', ids: ['regular_challenge', 'echo', 'zone_op', 'escape_op', 'path_of_trials', 'online_match'] },
+    { nameKey: 'group.shop_reward', ids: ['pet_merchant', 'weekly_mission', 'survivor_pass', 'total_charge'] }
+];
 
 // --- TimeManager ---
 class TimeManager {
@@ -267,7 +274,7 @@ class EventCalculator {
 
         // Escape Operation Special Logic
         if (event.id === 'escape_op') {
-            const remaining = 27 - currentDay;
+            const remaining = 28 - currentDay;
             if (currentDay === 27) {
                 result.detailLabel = this.dm.t('label.last_day');
                 result.statusClass = 'text-last-day';
@@ -610,7 +617,16 @@ class UIManager {
             return;
         }
 
-        events.forEach(event => {
+        const eventsById = new Map(events.map(event => [event.id, event]));
+        const displayedIds = new Set();
+        const addGroupHeading = nameKey => {
+            const heading = document.createElement('h4');
+            heading.className = `event-group-heading event-group-heading--${nameKey.split('.')[1]}`;
+            heading.textContent = this.dm.t(nameKey);
+            this.elEventList.appendChild(heading);
+        };
+
+        const renderEvent = event => {
             const calc = this.ec.calculate(event, this.selectedDate);
 
             const card = document.createElement('div');
@@ -683,7 +699,23 @@ class UIManager {
             }
 
             this.elEventList.appendChild(card);
+        };
+
+        EVENT_GROUPS.forEach(group => {
+            const groupEvents = group.ids.map(id => eventsById.get(id)).filter(Boolean);
+            if (!groupEvents.length) return;
+            addGroupHeading(group.nameKey);
+            groupEvents.forEach(event => {
+                displayedIds.add(event.id);
+                renderEvent(event);
+            });
         });
+
+        const ungroupedEvents = events.filter(event => !displayedIds.has(event.id));
+        if (ungroupedEvents.length) {
+            addGroupHeading('group.other');
+            ungroupedEvents.forEach(renderEvent);
+        }
 
         // Apply text fitting for event names
         this.fitTextEvents();
@@ -756,8 +788,9 @@ class UIManager {
         requestAnimationFrame(() => {
             const nameTexts = document.querySelectorAll('.event-name-text');
             nameTexts.forEach(el => {
-                let size = 0.95; // start rem
+                let size = 0.88; // start rem
                 el.style.fontSize = `${size}rem`;
+                if (window.innerWidth < 600) return;
 
                 // Parent width constraint
                 const parent = el.closest('.event-col-name');
